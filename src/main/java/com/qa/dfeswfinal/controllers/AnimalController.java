@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,8 +32,15 @@ public class AnimalController {
 		return this.animals.get(this.animals.size() - 1);
 	}
 
-	@GetMapping("/getAll")
+	// GET - READ
+	@GetMapping("/readAll")
 	public List<Animal> readAll() {
 		return this.animals;
+	}
+
+	// ReadByID
+	@GetMapping("/readById/{id}")
+	public Animal readById(@PathVariable int id) {
+		return this.animals.get(id);
 	}
 }
