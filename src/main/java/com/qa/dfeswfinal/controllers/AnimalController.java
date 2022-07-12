@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -41,6 +42,19 @@ public class AnimalController {
 	// ReadByID
 	@GetMapping("/readById/{id}")
 	public Animal readById(@PathVariable int id) {
+		return this.animals.get(id);
+	}
+
+	// PUT - UPDATE
+	@PutMapping("/update/{id}")
+	public Animal update(@PathVariable int id, @RequestBody Animal animal) {
+		// Removing the original customer
+		this.animals.remove(id);
+
+		// Add the updated customer
+		this.animals.add(id, animal);
+
+		// Return the updated user
 		return this.animals.get(id);
 	}
 }
