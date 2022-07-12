@@ -31,4 +31,8 @@ public class AnimalController {
 		return this.animals.get(this.animals.size() - 1);
 	}
 
+	@GetMapping("/getAll")
+	public List<Animal> readAll() {
+		return this.animals;
+	}
 }
