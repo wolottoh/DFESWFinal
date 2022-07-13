@@ -3,6 +3,7 @@ package com.qa.dfeswfinal.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,5 +57,12 @@ public class AnimalController {
 
 		// Return the updated user
 		return this.animals.get(id);
+	}
+
+	// DELETE - DELETE
+	@DeleteMapping("/delete/{id}")
+	public Animal delete(@PathVariable int id) {
+		return this.animals.remove(id);
+
 	}
 }
