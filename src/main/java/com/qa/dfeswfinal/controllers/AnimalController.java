@@ -39,20 +39,20 @@ public class AnimalController {
 
 	// ReadByID
 	@GetMapping("/readById/{id}")
-	public Animal readById(@PathVariable int id) {
+	public Animal readById(@PathVariable Long id) {
 		return this.service.readById(id);
 	}
 
 	// PUT - UPDATE
 	@PutMapping("/update/{id}")
-	public Animal update(@PathVariable int id, @RequestBody Animal animal) {
+	public Animal update(@PathVariable Long id, @RequestBody Animal animal) {
 
 		return this.service.update(id, animal);
 	}
 
 	// DELETE - DELETE
 	@DeleteMapping("/delete/{id}")
-	public Animal delete(@PathVariable int id) {
+	public boolean delete(@PathVariable Long id) {
 		return this.service.delete(id);
 
 	}
