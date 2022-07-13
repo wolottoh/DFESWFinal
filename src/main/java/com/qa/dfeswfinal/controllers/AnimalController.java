@@ -12,57 +12,48 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.dfeswfinal.entities.Animal;
+import com.qa.dfeswfinal.services.AnimalService;
 
 @RestController
 public class AnimalController {
 
-	// TEMPORARY storage, until we implement the real database later!
+	private AnimalService service;
 
-	private List<Animal> animals = new ArrayList<>();
-
-//    @GetMapping("/test")
-//    public String test() {
-//        return "Hello, World!";
-//}
+	// Dependency injection
+	public AnimalController(AnimalService service) {
+		this.service = service;
+	}
 
 	// POST - CREATE
 	@PostMapping("/create") // localhost:8080/customer/create
 	public Animal create(@RequestBody Animal animal) {
-		this.animals.add(animal);
 
-		// Returns the latest entry added to the list
-		return this.animals.get(this.animals.size() - 1);
+		return this.service.create(animal);
 	}
 
 	// GET - READ
 	@GetMapping("/readAll")
 	public List<Animal> readAll() {
-		return this.animals;
+		return this.service.readAll();
 	}
 
 	// ReadByID
 	@GetMapping("/readById/{id}")
 	public Animal readById(@PathVariable int id) {
-		return this.animals.get(id);
+		return this.service.readById(id);
 	}
 
 	// PUT - UPDATE
 	@PutMapping("/update/{id}")
 	public Animal update(@PathVariable int id, @RequestBody Animal animal) {
-		// Removing the original customer
-		this.animals.remove(id);
 
-		// Add the updated customer
-		this.animals.add(id, animal);
-
-		// Return the updated user
-		return this.animals.get(id);
+		return this.service.update(id, animal);
 	}
 
 	// DELETE - DELETE
 	@DeleteMapping("/delete/{id}")
 	public Animal delete(@PathVariable int id) {
-		return this.animals.remove(id);
+		return this.service.delete(id);
 
 	}
 }
