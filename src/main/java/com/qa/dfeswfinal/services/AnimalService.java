@@ -6,47 +6,52 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.qa.dfeswfinal.entities.Animal;
+import com.qa.dfeswfinal.repos.AnimalRepo;
 
 @Service
 public class AnimalService {
 
-	// TEMPORARY storage, until we implement the real database later!
-	private List<Animal> animals = new ArrayList<>();
+	private AnimalRepo repo;
+
+	public AnimalService(AnimalRepo repo) {
+		this.repo = repo;
+	}
 
 	// POST - CREATE
 	public Animal create(Animal animal) {
-		this.animals.add(animal);
-
-		// Returns the latest entry added to the list
-		return this.animals.get(this.animals.size() - 1);
+		return this.repo.saveAndFlush(animal);
 	}
 
 	// GET - READ
 	// ReadAll
 	public List<Animal> readAll() {
-		return this.animals;
+		return this.repo.findAll();
 	}
 
 	// ReadByID
-	public Animal readById(int id) {
-		return this.animals.get(id);
+	public Animal readById(Long id) {
+		return this.repo.findById(id).get();
 	}
-	
-	//PUT - UPDATE
-		public Animal update(int id, Animal animal) {
-			// Removing the original customer
-			this.animals.remove(id);
 
-			// Add the updated customer
-			this.animals.add(id, animal);
+	// PUT - UPDATE
+	public Animal update(Long id, Animal animal) {
 
-			// Return the updated user
-			return this.animals.get(id);
-		}
-		
-		//DELETE - DELETE
-		public Animal delete(int id) {
-			return this.animals.remove(id);
-		}
+		// 1) Get the existing entry.
+		Animal existing = this.repo.findById(id).get();
+
+		// 2) Change the existing entry, using our new animal object above.
+		existing.setName(animal.getName());
+		existing.setColour(animal.getColour());
+		existing.setBodyCovering(animal.getBodyCovering());
+
+		// 3) Save the entry back into the Database.
+		return this.repo.saveAndFlush(existing);
+	}
+
+	// DELETE - DELETE
+	public boolean delete(Long id) {
+		this.repo.deleteById(id);
+		return !this.repo.existsById(id); // this should be false. If it's true, then the delete failed, somehow.
+	}
 
 }
