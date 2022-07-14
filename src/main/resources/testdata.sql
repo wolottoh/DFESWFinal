@@ -1,0 +1,1 @@
+INSERT INTO `animal`(`name`, `colour`, `body_covering`) VALUES ('Lion', 'Gold', 'Fur');
