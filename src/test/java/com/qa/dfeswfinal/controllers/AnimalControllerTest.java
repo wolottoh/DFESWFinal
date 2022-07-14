@@ -94,4 +94,5 @@ public class AnimalControllerTest {
 		mvc.perform(delete("/delete/1").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
 
 	}
+
 }
