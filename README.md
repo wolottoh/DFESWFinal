@@ -23,6 +23,7 @@ The project can be further improved through the implementation of the principles
 ######	Screenshots showing your postman requests and the output from the API. Refer to Documentation folder
 ![create](/documentation/create.png.png)
 ![readAll](/documentation/readAll.png.png)
+![readbyid](/documentation/readbyid.png.png)
 ![update](/documentation/update.png2.png)
 ![update2](/documentation/update.png.png)
 ![delete](/documentation/delete.png.png)
