@@ -27,6 +27,7 @@ The project can be further improved through the implementation of the principles
 ######## Screenshot of your test results, including coverage report. Refer to Documentation folder
 ![swagger](/documentation/Screenshot-Swagger%20doc.png)
 ![coverage](/documentation/coverage.png.png)
+![risk assessment](/documentation/RiskAssessment.pdf.pdf)
   
 ######### Link to Jira Board.
   https://jamesibue.atlassian.net/jira/software/projects/DFEP/boards/3
