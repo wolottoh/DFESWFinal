@@ -21,9 +21,20 @@ unflinching support throughout the project.
 The project can be further improved through the implementation of the principles of Polymorphism, Abstraction,Inheritance. Also with the application of SOLID principles.
 
 ######	Screenshots showing your postman requests and the output from the API. Refer to Documentation folder
+![create](/documentation/create.png.png)
+![readAll](/documentation/readAll.png.png)
+![readbyid](/documentation/readbyid.png.png)
+![update](/documentation/update.png2.png)
+![update2](/documentation/update.png.png)
+![delete](/documentation/delete.png.png)
+![crude](/documentation/crud.png.png)
 ####### Screenshots of your database to prove that data is being persisted. Refer to Documentation folder
 ![dbupdate](/documentation/Screenshot10Update.png)
+![database](/documentation/h2database.png.png)
 ######## Screenshot of your test results, including coverage report. Refer to Documentation folder
+![swagger](/documentation/Screenshot-Swagger%20doc.png)
+![coverage](/documentation/coverage.png.png)
+![risk assessment](/documentation/RiskAssessment.pdf.pdf)
   
 ######### Link to Jira Board.
-  https://jamesibue.atlassian.net/jira/software/projects/DFEP/boards/3
+ [jira-link] : https://jamesibue.atlassian.net/jira/software/projects/DFEP/boards/3
