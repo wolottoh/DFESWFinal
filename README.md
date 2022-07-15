@@ -23,6 +23,7 @@ The project can be further improved through the implementation of the principles
 ######	Screenshots showing your postman requests and the output from the API. Refer to Documentation folder
 ![create](/documentation/create.png.png)
 ![readAll](/documentation/readAll.png.png)
+![update](/documentation/update.png2.png)
 ![crude](/documentation/crud.png.png)
 ####### Screenshots of your database to prove that data is being persisted. Refer to Documentation folder
 ![dbupdate](/documentation/Screenshot10Update.png)
