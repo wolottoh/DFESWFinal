@@ -35,4 +35,4 @@ The project can be further improved through the implementation of the principles
 ![risk assessment](/documentation/RiskAssessment.pdf.pdf)
   
 ######### Link to Jira Board.
-  https://jamesibue.atlassian.net/jira/software/projects/DFEP/boards/3
+ [jira-link] : https://jamesibue.atlassian.net/jira/software/projects/DFEP/boards/3
