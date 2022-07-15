@@ -24,6 +24,7 @@ The project can be further improved through the implementation of the principles
 ![create](/documentation/create.png.png)
 ![readAll](/documentation/readAll.png.png)
 ![update](/documentation/update.png2.png)
+![update2](/documentation/update.png.png)
 ![delete](/documentation/delete.png.png)
 ![crude](/documentation/crud.png.png)
 ####### Screenshots of your database to prove that data is being persisted. Refer to Documentation folder
