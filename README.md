@@ -21,6 +21,7 @@ unflinching support throughout the project.
 The project can be further improved through the implementation of the principles of Polymorphism, Abstraction,Inheritance. Also with the application of SOLID principles.
 
 ######	Screenshots showing your postman requests and the output from the API. Refer to Documentation folder
+![create](/documentation/create.png.png)
 ![crude](/documentation/crud.png.png)
 ####### Screenshots of your database to prove that data is being persisted. Refer to Documentation folder
 ![dbupdate](/documentation/Screenshot10Update.png)
