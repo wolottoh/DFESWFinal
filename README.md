@@ -24,6 +24,7 @@ The project can be further improved through the implementation of the principles
 ####### Screenshots of your database to prove that data is being persisted. Refer to Documentation folder
 ![dbupdate](/documentation/Screenshot10Update.png)
 ######## Screenshot of your test results, including coverage report. Refer to Documentation folder
+![swagger](/documentation/Screenshot-Swagger%20doc.png)
   
 ######### Link to Jira Board.
   https://jamesibue.atlassian.net/jira/software/projects/DFEP/boards/3
